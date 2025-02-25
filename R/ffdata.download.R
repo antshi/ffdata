@@ -15,8 +15,9 @@
 #' @param dividends a logical, TRUE (default) considers dividends. FALSE downloads the data without dividends.
 #' @param start a character string, start date for the download in the format "YYmm". Default value is 197501.
 #' @param end a character string, end date for the download in the format "YYmm". Default value is two months before Sys.Date() to insure availability.
-#' @param cleanNAs a logical, TRUE (default) replaces NAs with zoo::na.locf(). If FALSE, NAs are not cleaned.
+#' @param cleanNAs a logical, TRUE (default) replaces NAs with zoo::na.locf(). If FALSE, NAs are not cleaned. # nolint: line_length_linter.
 #' @return a .csv-file within the directory, defined in dir.
+#' 
 #' @examples
 #' library(ffdata)
 #' ffdata.download()
