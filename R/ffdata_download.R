@@ -28,10 +28,12 @@
 #' @return a .csv-file within the directory, defined in dir.
 #'
 #' @examples
-#' library(ffdata)
+#' \dontrun{
 #' ffdata_download()
 #' ffdata_download(freq = "m", type = "Bivariate", subtype = "ME_BE", number_factors = 25)
+#' }
 #' @export ffdata_download
+#' @import utils
 ffdata_download <- function(
     dir = NULL,
     type = "USResearch",
@@ -275,7 +277,7 @@ usresearch_download <-
           for (m in seq_len(ncol(rets))) {
             if (length(index_na[[m]]) != 0) {
               rets[index_na[[m]], m] <- NA
-              rets[, m] <- na.locf(rets[, m], na.rm = FALSE)
+              rets[, m] <- zoo::na.locf(rets[, m], na.rm = FALSE)
             }
           }
         }
@@ -353,7 +355,7 @@ usresearch_download <-
             if (length(index_na[[m]]) != 0) {
               rets[index_na[[m]], m] <- NA
               rets[, m] <-
-                na.locf(rets[, m], na.rm = FALSE)
+                zoo::na.locf(rets[, m], na.rm = FALSE)
             }
           }
         }
@@ -478,7 +480,7 @@ industry_download <-
         for (m in seq_len(ncol(rets))) {
           if (length(index_na[[m]]) != 0) {
             rets[index_na[[m]], m] <- NA
-            rets[, m] <- na.locf(rets[, m], na.rm = FALSE)
+            rets[, m] <- zoo::na.locf(rets[, m], na.rm = FALSE)
           }
         }
       }
@@ -640,7 +642,7 @@ bivariate_download <-
         for (m in seq_len(ncol(rets))) {
           if (length(index_na[[m]]) != 0) {
             rets[index_na[[m]], m] <- NA
-            rets[, m] <- na.locf(rets[, m], na.rm = FALSE)
+            rets[, m] <- zoo::na.locf(rets[, m], na.rm = FALSE)
           }
         }
       }
@@ -751,7 +753,7 @@ threeway_download <-
         for (m in seq_len(ncol(rets))) {
           if (length(index_na[[m]]) != 0) {
             rets[index_na[[m]], m] <- NA
-            rets[, m] <- na.locf(rets[, m], na.rm = FALSE)
+            rets[, m] <- zoo::na.locf(rets[, m], na.rm = FALSE)
           }
         }
       }
