@@ -18,8 +18,7 @@ bivariate_download(
 )
 }
 \arguments{
-\item{base}{a character string,
-the main webpage address "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/".}
+\item{base}{a character string, the Kenneth R. French Data Library address.}
 
 \item{dir}{a character string, the directory for saving the data. The current working directory is set by default.}
 

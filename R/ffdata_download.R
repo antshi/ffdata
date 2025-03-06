@@ -190,8 +190,7 @@ ffdata_download <- function(
 #' from the Kenneth R. French Data Library.
 #' The downloaded returns are saved then as a .csv-file in the chosen directory.
 #'
-#' @param base a character string,
-#' the main webpage address "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/".
+#' @param base a character string, the Kenneth R. French Data Library address.
 #' @param dir a character string, the directory for saving the data.
 #' The current working directory is set by default.
 #' @param sub_path a character string, the folder subpath, created by ffDataDownload.
@@ -384,8 +383,7 @@ usresearch_download <-
 #' from the Kenneth R. French Data Library.
 #' The downloaded returns are saved then as a .csv-file in the chosen directory.
 #'
-#' @param base a character string,
-#' the main webpage address "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/".
+#' @param base a character string, the Kenneth R. French Data Library address.
 #' @param dir a character string, the directory for saving the data. The current working directory is set by default.
 #' @param sub_path a character string, the folder subpath, created by ffDataDownload.
 #' @param number_factors an integer, the number of factors for the Industry portfolios.
@@ -507,8 +505,7 @@ industry_download <-
 #' from the Kenneth R. French Data Library.
 #' The downloaded returns are saved then as a .csv-file in the chosen directory.
 #'
-#' @param base a character string,
-#' the main webpage address "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/".
+#' @param base a character string, the Kenneth R. French Data Library address.
 #' @param dir a character string, the directory for saving the data. The current working directory is set by default.
 #' @param sub_path a character string, the folder subpath, created by ffDataDownload.
 #' @param number_factors an integer, the number of factors for the Bivariate portfolios.
@@ -669,8 +666,7 @@ bivariate_download <-
 #' from the Kenneth R. French Data Library.
 #' The downloaded returns are saved then as a .csv-file in the chosen directory.
 #'
-#' @param base a character string,
-#' the main webpage address "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/".
+#' @param base a character string, the Kenneth R. French Data Library address.
 #' @param dir a character string, the directory for saving the data. The current working directory is set by default.
 #' @param sub_path a character string, the folder subpath, created by ffDataDownload.
 #' @param subtype a character string, the Threeway portfolio subtype.
