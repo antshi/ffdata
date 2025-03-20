@@ -54,5 +54,5 @@ Download monthly returns with dividends for the 48 Industry Portfolios from Janu
 
 ```r
 library(ffdata)
-ffdata_download(freq="m", type="Industry", factors.n=48, start="199001", end="201812")
+ffdata_download(freq = "m", type = "Industry", factors.n = 48, start = "199001", end = "201812")
 ```
