@@ -36,15 +36,16 @@ The function automatically downloads cleaned for NAs, monthly returns of 5-Fama-
 
 ``` r
 library(ffdata)
+library(tidyverse)
 ffdata_download(start = "200101", end = "201812", number_factors =  5)
 
-ff_factors <- read.csv("USResearch_m_200101_201812/F-F_Research_Data_5_Factors_2x3.csv")
-str(ff_factors)
-ff_factors$Date <- as.Date(paste0(ff_factors$Date, "01"), format = "%Y%m%d")
-ff_factors <- ff_factors %>%
-  tibble::column_to_rownames("Date")
-str(ff_factors)
-save(ff_factors, file = "ff_5factors.rda")
+ff_5factors <- read.csv("USResearch_m_200101_201812/F-F_Research_Data_5_Factors_2x3.csv")
+str(ff_5factors)
+ff_5factors$Date <- as.Date(paste0(ff_5factors$Date, "01"), format = "%Y%m%d")
+ff_5factors <- ff_5factors %>%
+  column_to_rownames("Date")
+str(ff_5factors)
+save(ff_5factors, file = "ff_5factors.rda")
 ```
 
 ### Example 3
